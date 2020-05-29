@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #303841;
+    --secondary-color: #be3144;
+    --tetiary-color: #45567d;
+    --light-color: #f0f0f0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,4 +28,29 @@ ul {
 p {
     margin: 1.5rem 0;
     font-size: 1.5rem;
+}
+
+.container {
+    max-width: 128rem;
+    margin: 0 auto;
+}
+
+#navbar {
+    height: 7rem;
+    background-color: var(--secondary-color);
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar a {
+    color: var(--light-color);
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+#navbar a:hover {
+    background-color: var(--tetiary-color);
 }
