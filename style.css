@@ -86,7 +86,7 @@ ul {
 
 #projects {
     background-color: var(--tetiary-color);
-    min-height: 100vh;
+    min-height: 130rem;
     padding: 5rem 0;
     text-align: center;
 }
@@ -134,16 +134,21 @@ ul {
 #projects #more {
     display: inline-block;
     border: none;
-    padding: 1rem 3rem;
-    margin: 3rem 0;
+    padding: 1rem 2rem;
+    margin: 6rem 0;
     font-size: 2rem;
     background-color: var(--primary-color);
     color: var(--light-color);
+    transition: background-color .5s ease-out;
+}
+
+#projects #more:hover {
+    background-color: var(--secondary-color);
 }
 
 #reach-out {
     text-align: center;
-    height: 70vh;
+    height: 50rem;
 }
 
 #reach-out .heading {
@@ -169,13 +174,72 @@ ul {
 }
 
 #footer {
-    height: 20vh;
+    height: 10rem;
     border-top: 2px solid var(--secondary-color);
+}
+
+#footer .container {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: inherit;
 }
 
 #footer p {
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 960px) {
+    #projects .project-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #reach-out .contact a:last-child {
+        display: block;
+    }
+
+    #footer .container p:first-child {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .heading {
+        font-size: 3rem;
+    }
+
+    #welcome-section p {
+        font-size: 2rem;
+    }
+
+    #projects h2 {
+        font-size: 2.5rem;
+    }
+
+    #projects .project-tiles {
+        grid-template-columns: 1fr;
+    }
+
+    #projects .project-tiles .project-tile p {
+        font-size: 1.5rem;
+    }
+
+    #reach-out .contact a:first-child {
+        display: block;
+    }
+
+    #footer {
+        height: auto;
+        padding: 3rem;
+    }
+
+    #footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer .container p:first-child {
+        width: auto;
+        margin-bottom: 2rem;
+    }
 }
