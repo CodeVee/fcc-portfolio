@@ -13,26 +13,26 @@
 
 body, html {
     font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.5;
 }
 
 a {
     text-decoration: none;
+    color: var(--light-color);
 }
 
 ul {
     list-style: none;
 }
 
-p {
-    margin: .5rem 0;
-    font-size: 1.5rem;
-}
-
 .container {
     max-width: 128rem;
     margin: 0 auto;
+}
+
+.heading {
+    font-size: 6rem;
 }
 
 #navbar {
@@ -48,7 +48,6 @@ p {
 }
 
 #navbar a {
-    color: var(--light-color);
     font-size: 2rem;
     padding: 2rem;
 }
@@ -57,22 +56,51 @@ p {
     background-color: var(--tetiary-color);
 }
 
-#welcome-section {
+#welcome-section,
+#reach-out {
     background-color: var(--primary-color);
-    height: 100vh;
+    color: var(--light-color);
+}
+
+#welcome-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#welcome-section h1 {
-    font-size: 5rem;
-    color: var(--light-color);
+    height: 100vh;
 }
 
 #welcome-section p {
     font-size: 3rem;
     font-style: italic;
+    color: var(--secondary-color);
+    margin-top: -1rem;
+}
+
+#reach-out {
+    border-top: 2px solid var(--secondary-color);
+    text-align: center;
+    height: 80vh;
+}
+
+#reach-out .heading {
+    margin-top: 2rem;
+}
+
+#reach-out p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 6rem;
+}
+
+#reach-out .contact a {
+    font-size: 2.4rem;
+    padding: 0 1rem;
+    transition: all .5s ease-out;
+    display: inline-block;
+}
+
+#reach-out .contact a:hover {
+    transform: translateY(1rem);
     color: var(--secondary-color);
 }
