@@ -57,9 +57,16 @@ ul {
 }
 
 #welcome-section,
-#reach-out {
-    background-color: var(--primary-color);
+#projects,
+#reach-out,
+#footer {
     color: var(--light-color);
+}
+
+#welcome-section,
+#reach-out,
+#footer {
+    background-color: var(--primary-color);
 }
 
 #welcome-section {
@@ -77,13 +84,70 @@ ul {
     margin-top: -1rem;
 }
 
+#projects {
+    background-color: var(--tetiary-color);
+    min-height: 100vh;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 4.2rem;
+    padding: 5rem;
+    text-decoration: underline;
+}
+
+#projects .project-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+    margin: 0 5rem;
+}
+
+#projects .project-tiles .project-tile {
+    cursor: pointer;
+}
+
+#projects .project-tiles .project-tile img {
+    width: 100%;
+    height: calc(100% - 7rem);
+    object-fit: cover;
+}
+
+#projects .project-tiles .project-tile p {
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    margin-top: -.4rem;
+}
+
+#projects .project-tiles .project-tile p span {
+    color: var(--primary-color);
+    transition: color .5s ease-out;
+    font-size: 2rem;
+}
+
+#projects .project-tiles .project-tile:hover > p span {
+    color: orange;
+}
+
+#projects #more {
+    display: inline-block;
+    border: none;
+    padding: 1rem 3rem;
+    margin: 3rem 0;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
 #reach-out {
     text-align: center;
-    height: 55vh;
+    height: 70vh;
 }
 
 #reach-out .heading {
-    padding-top: 2rem;
+    padding-top: 15rem;
 }
 
 #reach-out p {
@@ -106,7 +170,6 @@ ul {
 
 #footer {
     height: 20vh;
-    background-color: var(--primary-color);
     border-top: 2px solid var(--secondary-color);
     display: flex;
     align-items: center;
@@ -115,5 +178,4 @@ ul {
 
 #footer p {
     font-size: 1.5rem;
-    color: var(--light-color);
 }
