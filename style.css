@@ -78,13 +78,12 @@ ul {
 }
 
 #reach-out {
-    border-top: 2px solid var(--secondary-color);
     text-align: center;
-    height: 80vh;
+    height: 55vh;
 }
 
 #reach-out .heading {
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 #reach-out p {
@@ -103,4 +102,18 @@ ul {
 #reach-out .contact a:hover {
     transform: translateY(1rem);
     color: var(--secondary-color);
+}
+
+#footer {
+    height: 20vh;
+    background-color: var(--primary-color);
+    border-top: 2px solid var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer p {
+    font-size: 1.5rem;
+    color: var(--light-color);
 }
